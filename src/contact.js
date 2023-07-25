@@ -1,22 +1,34 @@
 import React from "react";
 import { Layout } from "./App";
-
+import "./styles.css";
 function Contact() {
-    return(
-    <>
-        <Layout />
-        <h3>Ubon Ratchatani University</h3>
-        <div>
-            85 Sathonlamark Road
-            <br />
-            Warin Chamrap District
-            <br />
-            Ubon Ratchatani
-            <br />
-            Thailand 34190
-        </div>
-    </>
-    );
+  return (
+    <div >
+      <Layout />
+      <div className="card">
+        <Avatar />
+        <dvi className="data">
+          <Intro />
+        </dvi>
+      </div>
+    </div>
+  );
+}
+
+function Intro() {
+  return (
+    <div>
+      <h1>นายวีระยุทธ ลักษ์ศิลป์</h1>
+      <p>
+        นักศึกษาสาขาเทคโนโลยีสารสนเทศและการสื่อสาร คณะวิทยาศาสตร์
+        มหาวิทยาลัยอุบลราชธานี
+      </p>
+    </div>
+  );
+}
+
+function Avatar() {
+  return <img className="avatar" src="photo.jpg" alt="My Avatar" />;
 }
 
 export default Contact;
